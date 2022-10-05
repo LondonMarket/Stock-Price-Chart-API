@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example App - Stock Price Chart API</title>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+</head>
+<body>
+    <h2>Example & Test Application for consuming Stock Price Chart API</h2>
+
+    <div id="output" style="border: solid 1px black;"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script>
+        $.ajax({
+            url: 'http://localhost:8000',
+            contentType: 'application/json',
+            type: 'GET',
+            dataType: 'json',
+            success: (res) => {
+                $('#output').html(JSON.stringify(res))
+            },
+            error: (err) => {
+                $('#output').html(`Err ${err}`)
+            }
+        })
+    </script>
+</body>
+</html>
+
+<!-- TODO: USE ALPINE JS OR SIMILAR FOR BETTER FUNCTINOALITY ONCE API FURTHER DEVELOPED -->
