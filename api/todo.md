@@ -1,0 +1,1 @@
+- Add CORS options to .env, for dev allow * but prod should not
