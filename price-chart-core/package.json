@@ -1,0 +1,11 @@
+{
+  "name": "price-chart-core",
+  "version": "1.0.0",
+  "description": "HTML5 canvas to generate a stock price chart using Typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
