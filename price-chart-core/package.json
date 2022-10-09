@@ -2,10 +2,20 @@
   "name": "price-chart-core",
   "version": "1.0.0",
   "description": "HTML5 canvas to generate a stock price chart using Typescript",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "rimraf dist && npx tsc",
+    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/index.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "canvas": "^2.10.1"
+  },
+  "devDependencies": {
+    "concurrently": "^7.4.0",
+    "rimraf": "^3.0.2"
+  }
 }
