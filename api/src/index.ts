@@ -12,9 +12,12 @@ app.use(allowCorsDomain);
 
 app.use('/api', MainRouter);
 
-// Temp
-app.get('/', (req: Request, res: Response) => {
-  res.status(200).json('Express + TypeScript Server');
+app.get('/healthcheck', (req: Request, res: Response) => {
+  const statusCode = 200;
+  res.status(statusCode).json({
+    response: statusCode,
+    message: "OK"
+  });
 });
 
 // Start the server
