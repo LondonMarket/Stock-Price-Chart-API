@@ -13,10 +13,30 @@
     <!-- Alpine.js -->
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
-<body>
-    <h2 class="font-bold text-xl">Example & Test Application for consuming Stock Price Chart API</h2>
+<body class="p-2 bg-gray-100">
 
-    <div class="mt-5" id="output" style="border: solid 1px black;">Output Window</div>
+    <div class="bg-gray-300 border border-gray-200 rounded-lg p-4" id="contentWrapper">
+
+        <h2 class="font-bold text-xl mb-3">Example & Test Application for consuming Stock Price Chart API</h2>
+
+        <label class="font-bold" for="">API Endpoint:</label>
+        <select class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" id="">
+            <option value="">Healthcheck</option>
+            <option value="">Price Chart (Canvas Object)</option>
+            <option value="">Price Chart (JPEG Base64)</option>
+        </select>
+
+        <div class="mt-5">
+            <label class="font-bold" for="">Input:</label>
+            <div class="px-1 border border-gray-300 rounded-lg bg-white" id="input">Input Window</div>
+        </div>
+
+        <div class="mt-5">
+            <label class="font-bold" for="">Output:</label>
+            <div class="px-1 border border-gray-300 rounded-lg bg-white" id="output">Output Window</div>
+        </div>
+
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script>
