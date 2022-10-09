@@ -7,13 +7,16 @@
     <title>Example App - Stock Price Chart API</title>
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
 
+    <!-- Tailwindcss -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <!-- Alpine.js -->
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 <body>
-    <h2>Example & Test Application for consuming Stock Price Chart API</h2>
+    <h2 class="font-bold text-xl">Example & Test Application for consuming Stock Price Chart API</h2>
 
-    <div id="output" style="border: solid 1px black;"></div>
+    <div class="mt-5" id="output" style="border: solid 1px black;">Output Window</div>
 
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script>
@@ -26,7 +29,7 @@
                 $('#output').html(JSON.stringify(res))
             },
             error: (err) => {
-                $('#output').html(`Err ${err}`)
+                $('#output').html(`Error: ${err}`)
             }
         })
     </script>
