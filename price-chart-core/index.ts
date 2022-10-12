@@ -1,5 +1,9 @@
 import { createCanvas } from "canvas";
 
+export interface IPriceData {
+    time: string;
+    price: number;
+}
 
 export function CreateChart () {
 
