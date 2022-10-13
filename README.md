@@ -1,4 +1,4 @@
-# Stock-Price-Chart-API
+# Stock-Price-Chart & API (Node/Express.JS & Typescript)
 This project provides a Stock Price Chart along with an Express.js API which can serve the price chart in either a HTML5 canvas object or Base64 jpeg to be used in other projects or applications. 
 
 The chart can be customised with each request by passing theming options and simple toggles for common charting tools. 
